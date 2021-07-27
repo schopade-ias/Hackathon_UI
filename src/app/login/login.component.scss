@@ -13,3 +13,8 @@ button {
 select {
     margin-bottom: 2rem;
 }
+::ng-deep{
+    .vikas{
+        display: none;
+    }
+}
