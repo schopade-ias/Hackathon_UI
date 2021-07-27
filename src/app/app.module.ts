@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { StatisticComponent } from './statistic/statistic.component';
+import { CapabilityComponent } from './capability/capability.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { StatisticComponent } from './statistic/statistic.component';
     LoginComponent,
     HomeComponent,
     StatisticComponent,
+    CapabilityComponent,
   ],
   imports: [
     BrowserModule,
