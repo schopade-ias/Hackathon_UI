@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { SignInData } from '../model/signInData';
 import { Router } from '@angular/router';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private readonly mockUser: SignInData = new SignInData('user', 'test', 'Employee');
+  private readonly mockUser: SignInData = new SignInData('wang', 'test', 'Employee');
   isAuthenticated = false;
+  contents: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   authenticate(signInData: SignInData): boolean {
     if (this.checkCredentials(signInData)) {
@@ -46,5 +48,9 @@ export class AuthenticationService {
 
   getIsAuthenticated(): boolean {
     return this.isAuthenticated;
+  }
+  getloginDetails(signInData){
+    let params = new HttpParams();
+    return this.http.get('http://localhost:8090/login'+ '/' + signInData.value.login + '/' + signInData.value.password+ '/' + signInData.value.user);
   }
 }

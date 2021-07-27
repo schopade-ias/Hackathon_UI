@@ -8,10 +8,21 @@ import $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
 
+  userInfo: any;
+
   constructor() { }
 
   ngOnInit() {
     $('.vikas').css('display','none');
+
+    this.userInfo = {
+      name: "Joey Tribianni",
+      OverallExperience: 5,
+      domainExpertise: ''
+
+
+
+    }
   }
 
 }

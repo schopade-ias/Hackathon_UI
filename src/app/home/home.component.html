@@ -1,13 +1,14 @@
 <main role="main" class="container">
   <div class="navbar">
-    <a class="active"  href="#">Competence</a> 
+    <a class="active"  routerLink="/competence">Competence</a>
     <a routerLink="/capability">Capability</a> 
     <a href="#">Current Delivery</a>
+  </div>  
+  <div class="jumbotron">
+    <h1>Potential Self Assessment</h1>
+    <div>
+        <label for="hero-name">User Name</label>
+        <input class = "margin-left" id="hero-name" [(ngModel)]="userInfo.name" placeholder="name" disabled>
+      </div>
   </div>
-    <div class="jumbotron">
-      <h1>Competence</h1>
-      <p class="lead">
-          TBD
-      </p>
-    </div>
   </main>
