@@ -22,7 +22,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .navbar a.active {
-  background-color: #04AA6D;
+  background-color: #f03827;
 }
 
 @media screen and (max-width: 500px) {
@@ -33,9 +33,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
     text-align: left;
   }
 
+
+}
+.width-fix{
+
+  width: 9rem !important;
+
+}
   .margin-left{
 
     margin-left: 3rem;
 
   }
-}
+
