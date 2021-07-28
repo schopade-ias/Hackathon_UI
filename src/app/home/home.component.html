@@ -1,13 +1,31 @@
-<main role="main" class="container">
-  <div class="navbar">
-    <a class="active"  href="#">Competence</a> 
+<main role="main" class="">
+  <div class="navbar bg-red">
+    <a class="active"  routerLink="/competence">Competence</a>
     <a routerLink="/capability">Capability</a> 
     <a href="#">Current Delivery</a>
-  </div>
-    <div class="jumbotron">
-      <h1>Competence</h1>
-      <p class="lead">
-          TBD
-      </p>
+  </div>  
+  <div class="jumbotron">
+    <h1>User Profile</h1>
+    <div>
+      <label class="width-fix" for="hero-name">Name</label>
+      <input  [(ngModel)]="userInfo[0].userName"  disabled>
     </div>
+
+    <div>
+      <label class="width-fix" for="hero-name">Designation</label>
+      <input   [(ngModel)]="userInfo[0].designation"  disabled>
+    </div>
+
+    <div>
+      <label class="width-fix" for="hero-name">Team</label>
+      <input   [(ngModel)]="userInfo[0].team" placeholder="team" disabled>
+    </div>
+
+    <div>
+      <label class="width-fix" for="hero-name">Department</label>
+      <input  [(ngModel)]="userInfo[0].department" placeholder="department" disabled>
+    </div>
+
+   
+</div>
   </main>

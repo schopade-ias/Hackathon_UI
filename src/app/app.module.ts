@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { CapabilityComponent } from './capability/capability.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +16,15 @@ import { CapabilityComponent } from './capability/capability.component';
     LoginComponent,
     HomeComponent,
     StatisticComponent,
-    CapabilityComponent,
+    CapabilityComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
