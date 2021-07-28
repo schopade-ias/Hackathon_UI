@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'cf-competence',
@@ -9,18 +10,10 @@ export class CompetenceComponent implements OnInit {
 
   userInfo: any; 
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
-    this.userInfo = {
-      name: "Joey Tribianni",
-      OverallExperience: 5,
-      domainExpertise: '',
-      
-
-
-
-    }
+    this.userInfo = this.authenticationService.userInfo;
   }
 
 }
