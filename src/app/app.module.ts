@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { CapabilityComponent } from './capability/capability.component';
+import { CompetenceComponent } from './competence/competence.component';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     StatisticComponent,
-    CapabilityComponent
+    CapabilityComponent,
+    CompetenceComponent
+
   ],
   imports: [
     BrowserModule,

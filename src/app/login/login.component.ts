@@ -13,9 +13,11 @@ export class LoginComponent implements OnInit {
 
   isFormValid = false;
   areCredentialsInvalid = false;
+
   userInfo: any;
 
-  constructor(private authenticationService: AuthenticationService, private router:Router) { }
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
+
 
   ngOnInit() {
   }
@@ -39,10 +41,12 @@ export class LoginComponent implements OnInit {
     // }
     this.authenticationService.getloginDetails(signInForm).subscribe((res)=>{
       this.userInfo = res; 
+
       console.log(this.userInfo)
       if(this.userInfo[0].id != null){
         this.authenticationService.isAuthenticated = true;
         this.authenticationService.userInfo = this.userInfo;
+
         this.router.navigate(['home']);
       }
      // console.log(this.userInfo);

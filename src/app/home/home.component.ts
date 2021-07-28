@@ -12,11 +12,13 @@ export class HomeComponent implements OnInit {
   userInfo: any;
 
 
+
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     $('.vikas').css('display','none');
     this.userInfo = this.authenticationService.userInfo;
+
   }
 
   

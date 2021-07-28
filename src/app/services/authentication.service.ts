@@ -3,12 +3,13 @@ import { SignInData } from '../model/signInData';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private readonly mockUser: SignInData = new SignInData('user', 'test', 'Employee');
+  private readonly mockUser: SignInData = new SignInData('wang', 'test', 'Employee');
   isAuthenticated = false;
   contents: any;
   userInfo: any;
@@ -57,4 +58,6 @@ export class AuthenticationService {
   getUserSkills(signInData){
     return this.http.get('http://localhost:8090/userSkills'+ '/' + signInData.value.id);
   }
+
+
 }
