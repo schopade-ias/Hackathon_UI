@@ -55,9 +55,9 @@ export class AuthenticationService {
   
     return this.http.get('http://localhost:8090/login'+ '/' + signInData.value.login + '/' + signInData.value.password+ '/' + signInData.value.user);
   }
-  getUserSkills(signInData){
-    return this.http.get('http://localhost:8090/userSkills'+ '/' + signInData.value.id);
-  }
+  // getUserSkills(signInData){
+  //   return this.http.get('http://localhost:8090/userSkills'+ '/' + signInData.value.id);
+  // }
 
 
 }

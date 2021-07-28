@@ -2,34 +2,40 @@
 <main role="main" class="">
   <div class="navbar bg-red">
 
-    <a class="active"  routerLink="/competence">Competence</a>
-    <a routerLink="/capability">Capability</a> 
+    <a class="active"  routerLink="/competence">Profile</a>
+    <a routerLink="/capability">Skills</a> 
     <a href="#">Current Delivery</a>
   </div>  
   <div class="jumbotron">
 
     <h1>User Profile</h1>
-    <div>
-      <label class="width-fix" for="hero-name">Name</label>
+    <div *ngIf="role == 'Manager'">
+      <label class="width-fix" for="hero-name">Manager Name</label>
       <input  [(ngModel)]="userInfo[0].userName"  disabled>
     </div>
 
-    <div>
-      <label class="width-fix" for="hero-name">Designation</label>
-      <input   [(ngModel)]="userInfo[0].designation"  disabled>
+    <div *ngIf="role == 'Employee'">
+      <label class="width-fix" for="hero-name">Employee Name</label>
+      <input  [(ngModel)]="userInfo[0].userName"  disabled>
     </div>
 
-    <div>
-      <label class="width-fix" for="hero-name">Team</label>
-      <input   [(ngModel)]="userInfo[0].team" placeholder="team" disabled>
-    </div>
+      <div>
+        <label class="width-fix" for="hero-name">Designation</label>
+        <input   [(ngModel)]="userInfo[0].designation"  disabled>
+      </div>
 
-    <div>
-      <label class="width-fix" for="hero-name">Department</label>
-      <input  [(ngModel)]="userInfo[0].department" placeholder="department" disabled>
-    </div>
+      <div>
+        <label class="width-fix" for="hero-name">Team</label>
+        <input   [(ngModel)]="userInfo[0].team" placeholder="team" disabled>
+      </div>
+
+      <div>
+        <label class="width-fix" for="hero-name">Department</label>
+        <input  [(ngModel)]="userInfo[0].department" placeholder="department" disabled>
+      </div>
 
    
 </div>
+
   
   </main>

@@ -11,9 +11,9 @@ export class CapabilityComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
-    this.authenticationService.getUserSkills(this.authenticationService.userInfo[0].id).subscribe((res)=>{
-      console.log(res);
-   });  
+  //   this.authenticationService.getUserSkills(this.authenticationService.userInfo[0].id).subscribe((res)=>{
+  //     console.log(res);
+  //  });  
   }
 
 }
