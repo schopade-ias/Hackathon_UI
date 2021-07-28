@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { StatisticComponent } from './statistic/statistic.component';
 import { CapabilityComponent } from './capability/capability.component';
 import { CompetenceComponent } from './competence/competence.component';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     StatisticComponent,
     CapabilityComponent,
     CompetenceComponent
+
   ],
   imports: [
     BrowserModule,
@@ -26,8 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [
-    HttpClientModule],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

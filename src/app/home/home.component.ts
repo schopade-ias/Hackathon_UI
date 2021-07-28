@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import $ from 'jquery';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'cf-home',
@@ -10,19 +11,16 @@ export class HomeComponent implements OnInit {
 
   userInfo: any;
 
-  constructor() { }
+
+
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     $('.vikas').css('display','none');
+    this.userInfo = this.authenticationService.userInfo;
 
-    this.userInfo = {
-      name: "Joey Tribianni",
-      OverallExperience: 5,
-      domainExpertise: ''
-
-
-
-    }
   }
+
+  
 
 }
